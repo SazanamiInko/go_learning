@@ -2,3 +2,4 @@ PGシリーズ
  pg0001_std_print:標準出力
  pg0002_stdin:標準入力
  pg0003_print_rl_less:改行なし標準出力
+ pg0004_val_string:文字列型
