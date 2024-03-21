@@ -5,3 +5,4 @@ PGシリーズ
  pg0004_val_string:文字列型 
  pg0005_val_int:整数型
  pg0006_val_double:少数型
+ pg0007_ope_plus:加算演算子
