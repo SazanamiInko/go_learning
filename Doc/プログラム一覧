@@ -7,3 +7,4 @@ PGシリーズ
  pg0006_val_double:少数型
  pg0007_ope_plus:加算演算子
  pg0008_ope_minus:引き算
+ pg0009_ope_multi:乗算
