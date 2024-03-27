@@ -9,3 +9,5 @@ PGシリーズ
  pg0008_ope_minus:引き算
  pg0009_ope_multi:乗算
  pg0010_ope_divide:除算
+ pg0011_ope_mod:剰余
+ pg0001_std_print:形式表示
