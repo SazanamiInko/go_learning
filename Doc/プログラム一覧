@@ -11,6 +11,7 @@ PGシリーズ
  pg0010_ope_divide:除算
  pg0011_ope_mod:剰余
  pg0012_std_print:形式表示
+ pg0013_conat:定数
 
  TRシリーズ
   tr0001_calc:四則演算
