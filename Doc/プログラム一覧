@@ -14,5 +14,7 @@ PGシリーズ
  pg0013_conat:定数
  pg0014_cast:型変換
  pg0015_floatDis:浮動小数点桁数指定表示
+ pg0016_zerosup:ゼロ埋め
+
  TRシリーズ
   tr0001_calc:四則演算
