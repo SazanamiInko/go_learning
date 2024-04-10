@@ -15,6 +15,7 @@ PGシリーズ
  pg0014_cast:型変換
  pg0015_floatDis:浮動小数点桁数指定表示
  pg0016_zerosup:ゼロ埋め
+ pg0017_bindisp:2進数表示
 
  TRシリーズ
   tr0001_calc:四則演算
