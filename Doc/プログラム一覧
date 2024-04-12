@@ -17,5 +17,6 @@ PGシリーズ
  pg0016_zerosup:ゼロ埋め
  pg0017_bindisp:2進数表示
  pg0018_octdisp:8進数表示
+ pg0019_hexdisp：16進数表示
  TRシリーズ
   tr0001_calc:四則演算
