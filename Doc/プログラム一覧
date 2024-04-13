@@ -18,5 +18,7 @@ PGシリーズ
  pg0017_bindisp:2進数表示
  pg0018_octdisp:8進数表示
  pg0019_hexdisp：16進数表示
+ pg0020_or_ope:OR演算
+
  TRシリーズ
   tr0001_calc:四則演算
