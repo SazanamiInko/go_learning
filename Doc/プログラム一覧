@@ -19,6 +19,8 @@ PGシリーズ
  pg0018_octdisp:8進数表示
  pg0019_hexdisp：16進数表示
  pg0020_or_ope:OR演算
+ pg0021_and_ope:AND演算
+ pg0022_xor_ope_X:XOR演算(ビルドエラーになります)
 
  TRシリーズ
   tr0001_calc:四則演算
