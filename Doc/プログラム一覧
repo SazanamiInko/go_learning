@@ -22,5 +22,7 @@ PGシリーズ
  pg0021_and_ope:AND演算
  pg0022_xor_ope_X:XOR演算(ビルドエラーになります)
  pg0023_atoi:文字->数値変換
+ pg0024_shift_right:右シフト
+
  TRシリーズ
   tr0001_calc:四則演算
