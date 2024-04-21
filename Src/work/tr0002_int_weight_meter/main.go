@@ -10,11 +10,18 @@ import (
 	"math"
 )
 
+//定数
+const INITIALIZE_VALUE=-1
+const START=2
+
 // 生徒構造体
 type TStudent struct {
 	name        string
 	idealWeight int
+	mini_isIdeal float32
+	max_isIdeal float32
 	weight      float32
+	tooFat  bool
 	records     []TRecord
 }
 
@@ -44,9 +51,23 @@ func main() {
 
 	var students = [4]*TStudent{&studenA, &studenB, &studenC, &studenD}
 
+	for {
+		var fat_num=0
 	for _, student := range students {
-		recordingWeight(student)
-		fatStudent(student)
+		if(!student.tooFat){
+			recordingWeight(student)
+
+			if(student.tooFat){
+				fat_num++;
+			}
+
+			fatStudent(student)
+		}
+	}
+
+	if(fat_num==students.len()){
+		break
+	}
 
 	}
 	for _, student := range students {
@@ -61,7 +82,9 @@ func CreateStudent(name string, idealWeight int) TStudent {
 	var student TStudent
 	student.name = name
 	student.idealWeight = idealWeight
-	student.weight = float32(idealWeight - 2)
+	student.weight = float32(idealWeight - START)
+	student.mini_isIdeal=INITIALIZE_VALUE
+	student.max_isIdeal=INITIALIZE_VALUE
 	return student
 }
 
@@ -75,9 +98,22 @@ func recordingWeight(student *TStudent) {
 	var record TRecord
 	record.weight = student.weight
 	record.paper = takeHelthMeter(student)
-	var s = student.records
-	append(s, record)
 
+	if(record.paper.weight>student.idealWeight){
+		record.tooFat=true
+		student.tooFat=true
+	}
+
+	if(record.paper.weight==student.idealWeight){
+		record.isIdeal=true;
+		record.max_isIdeal=record.weight
+		if(student.mini_isIdeal==INITIALIZE_VALUE)
+		{
+			record.mini_isIdeal=record.weight
+		}
+	}
+
+	student.records = append(student.records, record)
 }
 
 // 体重計に乗る
