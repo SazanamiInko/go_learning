@@ -24,6 +24,7 @@ PGシリーズ
  pg0023_atoi:文字->数値変換
  pg0024_shift_right:右シフト
  pg0025_shift_left:左シフト
+ pg0026_boolean:bool型
 
  TRシリーズ
   tr0001_calc:四則演算
