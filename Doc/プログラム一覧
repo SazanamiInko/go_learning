@@ -26,6 +26,6 @@ PGシリーズ
  pg0025_shift_left:左シフト
  pg0026_boolean:bool型
  pg0027_literal:リテラル
- 
+ pg0028_ope_logic_X:演算子が定義されてないエラー
  TRシリーズ
   tr0001_calc:四則演算

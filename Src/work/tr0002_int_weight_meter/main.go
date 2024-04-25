@@ -10,19 +10,19 @@ import (
 	"math"
 )
 
-//定数
-const INITIALIZE_VALUE=-1
-const START=2
+// 定数
+const INITIALIZE_VALUE = -1
+const START = 2
 
 // 生徒構造体
 type TStudent struct {
-	name        string
-	idealWeight int
+	name         string
+	idealWeight  int32
 	mini_isIdeal float32
-	max_isIdeal float32
-	weight      float32
-	tooFat  bool
-	records     []TRecord
+	max_isIdeal  float32
+	weight       float32
+	tooFat       bool
+	records      []TRecord
 }
 
 // 記録用紙
@@ -52,22 +52,22 @@ func main() {
 	var students = [4]*TStudent{&studenA, &studenB, &studenC, &studenD}
 
 	for {
-		var fat_num=0
-	for _, student := range students {
-		if(!student.tooFat){
-			recordingWeight(student)
+		var fat_num = 0
+		for _, student := range students {
+			if !student.tooFat {
+				recordingWeight(student)
 
-			if(student.tooFat){
-				fat_num++;
+				if student.tooFat {
+					fat_num++
+				}
+
+				fatStudent(student)
 			}
-
-			fatStudent(student)
 		}
-	}
 
-	if(fat_num==students.len()){
-		break
-	}
+		if fat_num == len(students) {
+			break
+		}
 
 	}
 	for _, student := range students {
@@ -78,13 +78,13 @@ func main() {
 }
 
 // 生徒を作る
-func CreateStudent(name string, idealWeight int) TStudent {
+func CreateStudent(name string, idealWeight int32) TStudent {
 	var student TStudent
 	student.name = name
 	student.idealWeight = idealWeight
 	student.weight = float32(idealWeight - START)
-	student.mini_isIdeal=INITIALIZE_VALUE
-	student.max_isIdeal=INITIALIZE_VALUE
+	student.mini_isIdeal = INITIALIZE_VALUE
+	student.max_isIdeal = INITIALIZE_VALUE
 	return student
 }
 
@@ -99,17 +99,16 @@ func recordingWeight(student *TStudent) {
 	record.weight = student.weight
 	record.paper = takeHelthMeter(student)
 
-	if(record.paper.weight>student.idealWeight){
-		record.tooFat=true
-		student.tooFat=true
+	if record.paper.displayWeight > int32(student.idealWeight) {
+		record.tooFat = true
+		student.tooFat = true
 	}
 
-	if(record.paper.weight==student.idealWeight){
-		record.isIdeal=true;
-		record.max_isIdeal=record.weight
-		if(student.mini_isIdeal==INITIALIZE_VALUE)
-		{
-			record.mini_isIdeal=record.weight
+	if record.paper.displayWeight == student.idealWeight {
+		record.isIdeal = true
+		student.max_isIdeal = record.weight
+		if student.mini_isIdeal == INITIALIZE_VALUE {
+			student.mini_isIdeal = record.weight
 		}
 	}
 
