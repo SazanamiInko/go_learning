@@ -27,5 +27,7 @@ PGシリーズ
  pg0026_boolean:bool型
  pg0027_literal:リテラル
  pg0028_ope_logic_X:演算子が定義されてないエラー
+ PG0029_byte_or:OR演算(バイト)
+
  TRシリーズ
   tr0001_calc:四則演算
