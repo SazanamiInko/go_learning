@@ -31,6 +31,7 @@ PGシリーズ
  pg0030_byte_and:AND演算(バイト)
  pg0031_byte_xor:XOR演算(バイト)
  pg0032_not:否定演算
+ pg0033sqrt:平方根
  
  TRシリーズ
   tr0001_calc:四則演算
