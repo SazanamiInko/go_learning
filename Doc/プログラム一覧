@@ -32,7 +32,9 @@ PGシリーズ
  pg0031_byte_xor:XOR演算(バイト)
  pg0032_not:否定演算
  pg0033sqrt:平方根
- 
+ pg0034_if:if文
+
+
  TRシリーズ
   tr0001_calc:四則演算
   tr0002_sqrt:平方根の近似値
